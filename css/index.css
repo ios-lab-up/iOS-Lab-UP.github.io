@@ -1,0 +1,240 @@
+:root {
+    --color-fondo: #000000;
+    --color-texto-sec: #AEAEAE;
+    --color-secundario: #e000ff;
+    --color-terciario: #ff0038;
+  }
+
+  .blueGradient {
+    background: linear-gradient(to right, #3C7BF4 0%, #45DEFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.purpleGradient {
+    background: linear-gradient(to right, #773CF4, #DA45FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+body{
+    background-color: var(--color-fondo);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+
+.navbar-brand img {
+    max-width: 150px;
+  }
+
+.bg-black {
+    background-color: var(--color-fondo);
+
+  }
+
+
+  .mainTitle{
+    font-size: 5em;
+    font-weight: 800;
+    color: white;
+  }
+
+
+  .gradientAnim {
+    background: linear-gradient(to right, #FF695F, #FFCB44);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientChange 7s ease infinite;
+    
+}
+
+@keyframes gradientChange {
+    0% {
+       
+        background: linear-gradient(to right, #3C7BF4, #45DEFF);
+        -webkit-background-clip: text;
+    }
+    25% {
+       
+        background: linear-gradient(to right, #FF695F, #FFCB44);
+    -webkit-background-clip: text;
+    }
+    50% {
+       
+        background: linear-gradient(to right, #773CF4, #DA45FF);
+    -webkit-background-clip: text;
+    }
+
+    75% {
+       
+        background: linear-gradient(to right, #3C7BF4, #45DEFF);
+        -webkit-background-clip: text; 
+    }
+
+    100% {
+       
+        background: linear-gradient(to right, #773CF4, #DA45FF);
+    -webkit-background-clip: text;
+    }
+}
+
+.mainText {
+    color: var(--color-texto-sec);
+    font-size: 1.5em;
+
+
+}
+
+.conatinerR{
+    position: relative;
+}
+
+.frontRec{
+    background-color: #FAD719;
+    width: 85%;
+    height: 680px;
+    border-radius: 28px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 30%;
+    background-image: url("/assets/images/aboutImage.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.backRec{
+    background-color: #042FBB;
+    width: 80%;
+    height: 620px;
+    border-radius: 28px;
+    z-index: 0;
+    margin: auto;
+    
+}
+.a {
+    background-color: #ff0038 !important;
+}
+
+.ally {
+    color: var(--color-texto-sec);
+    font-weight: 600;
+}
+
+.logos {
+    height: 20;
+    width: 10;
+}
+
+.about {
+    margin-top: 12%;
+}
+
+.main {
+    margin-top: 10%;
+}
+
+.secTitle {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.subSecTitle {
+    font-weight: 700;
+}
+
+
+
+.aboutInfo {
+    margin-left: 3%;
+}
+
+.btnGlow {
+	background-image: linear-gradient(to right, #ff6e5e, #ffca45);
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #f4f4f4;
+	display: block;
+	font: 1.2rem "Poppins", Arial, sans-serif;
+	height: 60px;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	padding: 0.5px;
+	position: relative;
+	text-decoration: none;
+	width: 220px;
+	z-index: 2;
+}
+
+.btnGlow:hover {
+	color: #fff;
+	--angle: 0deg;
+	background-image: linear-gradient(var(--angle), #ff6e5e, #ffca45);
+
+	animation: 5s rotate linear infinite;
+}
+
+.btnGlow span {
+	align-items: center;
+	background: #090909;
+	border-radius: 7px;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	transition: background 0.5s ease;
+	width: 100%;
+}
+
+.btnGlow:before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(-45deg, #ff6e5eb6 20%, #e34c1e7d 5%);
+	transform: translate3d(0px, 10px, 0) scale(0.95);
+	filter: blur(50px);
+	opacity: var(0.8);
+	transition: opacity 0.1s;
+	border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.btnGlow::after {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: inherit;
+	border-radius: inherit;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+.funcSec {
+    margin-top: 10%;
+}
+
+
