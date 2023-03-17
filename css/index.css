@@ -5,6 +5,10 @@
     --color-terciario: #ff0038;
   }
 
+  a{
+    text-decoration: none;
+  }
+
   .blueGradient {
     background: linear-gradient(to right, #3C7BF4 0%, #45DEFF 100%);
     -webkit-background-clip: text;
@@ -14,6 +18,12 @@
 
 .purpleGradient {
     background: linear-gradient(to right, #773CF4, #DA45FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.orangeGradient {
+    background: linear-gradient(to right,#FF695F, #FFCB44);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -130,7 +140,7 @@ body{
 }
 
 .about {
-    margin-top: 12%;
+    margin-top: 8%;
 }
 
 .main {
@@ -237,4 +247,38 @@ body{
     margin-top: 10%;
 }
 
+.codingClubCard{
 
+    width: 100%;
+    margin: auto;
+    height: 550px;
+    border-radius: 20px;
+
+    background-color: #161617;
+}
+
+.bg-dark {
+    background-color: #161617 !important;
+}
+.card-img-top {
+    width: 100%;
+    height: 12vw;
+    object-fit: cover;
+}
+.card-body {
+    text-align: left;
+  }
+  
+  .card-text {
+    font-size: 12px;
+  }
+
+footer {
+    border-top: 0.3px solid var(--color-texto-sec);
+    margin-top: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
