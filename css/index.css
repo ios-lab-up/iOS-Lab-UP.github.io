@@ -282,3 +282,12 @@ a {
     text-decoration: none;
     color: white;
 }
+@media only screen and (max-width: 600px) {
+
+    .mainTitle{
+        font-size: 3em;
+        font-weight: 800;
+        color: white;
+      }
+
+  }
