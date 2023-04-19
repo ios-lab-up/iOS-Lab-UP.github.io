@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/hackaton.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 
     <title>Hackaton iOS Lab</title>
@@ -126,6 +127,19 @@
                     </div>
                   </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree" data-bs-parent="#accordionFlushExample">
+                          <p class="headerSize">Ubicación del evento</p>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body desc">
+                          <p class="desc">El evento se llevará acabo en el Auditorio de la Universidad Panamericana Campus Mixcoac.</p>
+                          <div id="map"></div>
+                      </div>
+                    </div>
+                  </div>
               </div>
               
            </div>
@@ -269,7 +283,7 @@
 
       <div class="container mb-5">
         <div class="row justify-content-center">
-          <div class="col-12 gradientCard h-100">
+          <div class="col-12 gradientCard h-100 m-2">
             <div class="row justify-content-center align-items-center">
               <div class="col-12">
                 <div class="row justify-content-center">
@@ -292,10 +306,36 @@
           </div>
         </div>
       </div>
+
+
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAztfbERz3Got0gRbui4ochsIZp9mS4974&callback=initMap&v=weekly"
+      defer
+    ></script>
       
       
       
     <!-- Optional JavaScript; choose one of the two! -->
+
+    <script>
+        // Initialize and add the map
+            function initMap() {
+            // The location of Uluru
+            const uluru = { lng: -99.1839134, lat: 19.372925 };
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 16,
+                center: uluru,
+            });
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+            });
+            }
+
+            window.initMap = initMap;
+    </script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
