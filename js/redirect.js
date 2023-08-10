@@ -1,6 +1,7 @@
 var githubUsernames = {
-    "0218982": "isiguenza",
-    "0250009": "luisced"
+    "isiguenza": "isiguenza",
+    "0250009": "luisced",
+    "ioslab" : "iOS-Lab-UP"
   };
   
   
