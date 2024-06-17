@@ -5,103 +5,44 @@
     <!-- Enlace al archivo CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <style>
-       
-
-    </style>
 </head>
 <body>
     <div class="container py-5">
         <h1 class="text-center">Descarga tu memoji</h1>
-        <div class="row justify-content-center ">
+        <div class="row justify-content-center">
             <div class="col-md-4">
                 <div id="previewContainer">
                     <h3 class="text-center">Vista previa:</h3>
-                    <img id="previewImage" src="images/Default.png" alt="Vista previa" class="img-thumbnail" style="display: none;">
+                    <img id="previewImage" src="" alt="Vista previa" class="img-thumbnail" style="display: none;">
                 </div>
                 <label for="imageSelector" class="form-label">Selecciona tu memoji:</label>
                 <select id="imageSelector" class="form-select">
-                    <option value="images/Default.png">--</option>
-                    <option value="images/Kikin.png">Kikin</option>
-                    <option value="images/Sara.png">Sara</option>
-                    <option value="images/Ana_Lau.png">Ana Lau</option>
-                    <option value="images/Antonio.png">Antonio</option>
-                    <option value="images/Camila.png">Camila</option>
-                    <option value="images/Cedillo.png">Luis Cedillo</option>
-                    <option value="images/Dani_V.png">Dani Valencia</option>
-                    <option value="images/David.PNG">David Escobar</option>
-                    <option value="images/Diego_S.png">Diego Sanchez</option>
-                    <option value="images/Hector.png">Hector</option>
-                    <option value="images/Inaki.png">Iñaki</option>
-                    <option value="images/Ivan.png">Ivan</option>
-                    <option value="images/Ivanna.png">Ivanna</option>
-                    <option value="images/JP.png">Juan Pablo</option>
-                    <option value="images/Maria.png">María</option>
-                    <option value="images/Mau_A.png">Mau Ascencio</option>
-                    <option value="images/Mau_C.png">Mau Chavarría</option>
-                    <option value="images/Marinee.png">Marinee</option>
-                    <option value="images/Mau.png">Mau Perez</option>
-                    <option value="images/Mou.png">Mou</option>
-                    <option value="images/Pelaez.png">Daniel Pelaez</option>
-                    <option value="images/Pipis.png">Javier (pipis)</option>
-                    <option value="images/Vitela.png">Diego Vitela</option>
-                    <option value="images/Mafer.png">Mafer</option>
-                    <option value="images/Cisco.png">Cisco</option>
-                    <option value="images/Miranda.png">Miranda</option>
-                    <option value="images/Zian.png">Zianya</option>
-                    <option value="images/Lolo.png">Lorenzo</option>
-                    <option value="images/Melany.png">Melany</option>
-                    <option value="images/Ximena.png">Ximena</option>
-                    <option value="images/Ale.png">Ale</option>
-                    <option value="images/Isabel.png">Isabel</option>
-
-                    <option value="images/Papoi.png">Papoi</option>
-
-                    <option value="images/Xayil.png">Xayil</option>
-                    <option value="images/Rige.png">Rige</option>
-                    <option value="images/AnaS.png">Ana Sofi</option>
-
-                    <option value="images/Liz.png">Liz</option>
-                    <option value="images/Emi_Montes.png">Emi Montes</option>
-                    <option value="images/Sergio.png">Sergio</option>
-                    <option value="images/DiegoP.png">Diego Preza</option>
-
-                    <option value="images/Regina.png">Regina Melgarejo</option>
-                    
-
-                 
-                    
-                    <!-- Agrega más opciones con los nombres y rutas de las imágenes que desees -->
+                    <option value="">--</option>
+                    <!-- Las opciones se agregarán dinámicamente desde Airtable -->
                 </select>
                 <div class="mt-3">
                     <label for="colorSelector" class="form-label">Selecciona un color:</label>
                     <div id="colorSelector" class="color-selector">
-                      <div class="color-option" data-color="#faeeb7"></div>
-                      <div class="color-option" data-color="#e59973"></div>
-                      <div class="color-option" data-color="#e07a80"></div>
-
-                      <div class="color-option" data-color="#daafcb"></div>
-                      <div class="color-option" data-color="#bad0c6"></div>
-                      <div class="color-option" data-color="#f1ccb4"></div>
-
-                      <div class="color-option" data-color="#eebad7"></div>
-                      <div class="color-option" data-color="#eec389"></div>
-                      <div class="color-option" data-color="#eacab7"></div>
-
-                      <div class="color-option" data-color="#a7a38e"></div>
-                      <div class="color-option" data-color="#cceefa"></div>
-                      <div class="color-option" data-color="#eab2b0"></div>
-
-                      <div class="color-option" data-color="#b8cff8"></div>
-                      <div class="color-option" data-color="#c5b4f3"></div>
-                      <div class="color-option" data-color="#d1c5f2"></div>
-
-                      <div class="color-option" data-color="#d6fdee"></div>
-                      <div class="color-option" data-color="#e6b8b8"></div>
-                      <div class="color-option" data-color="#f2d2d6"></div>
+                        <div class="color-option" data-color="#faeeb7"></div>
+                        <div class="color-option" data-color="#e59973"></div>
+                        <div class="color-option" data-color="#e07a80"></div>
+                        <div class="color-option" data-color="#daafcb"></div>
+                        <div class="color-option" data-color="#bad0c6"></div>
+                        <div class="color-option" data-color="#f1ccb4"></div>
+                        <div class="color-option" data-color="#eebad7"></div>
+                        <div class="color-option" data-color="#eec389"></div>
+                        <div class="color-option" data-color="#eacab7"></div>
+                        <div class="color-option" data-color="#a7a38e"></div>
+                        <div class="color-option" data-color="#cceefa"></div>
+                        <div class="color-option" data-color="#eab2b0"></div>
+                        <div class="color-option" data-color="#b8cff8"></div>
+                        <div class="color-option" data-color="#c5b4f3"></div>
+                        <div class="color-option" data-color="#d1c5f2"></div>
+                        <div class="color-option" data-color="#d6fdee"></div>
+                        <div class="color-option" data-color="#e6b8b8"></div>
+                        <div class="color-option" data-color="#f2d2d6"></div>
                     </div>
-                  </div>
-                  
+                </div>
                 <a id="downloadLink" class="btn btn-success mt-3" style="display: none;">Descargar memoji</a>
             </div>
         </div>
@@ -109,6 +50,7 @@
 
     <!-- Enlace al archivo JavaScript de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
